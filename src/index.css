@@ -1,11 +1,13 @@
 html,
 body {
-  margin: 0;
+  margin: 1em 2em;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #131515;
+  --lochinvar: #339989;
 }
 
 code {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Encode Sans", sans-serif;
 }

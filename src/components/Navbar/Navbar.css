@@ -1,28 +1,38 @@
 .navigation {
-  background: -webkit-linear-gradient(360deg, #383836 10%, #4a4a4a 360%);
-  background: linear-gradient(360deg, #383836 10%, #4a4a4a 360%);
-  font-weight: 500;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
-  height: 5vh;
-  padding: 0 2em;
+  padding: 21px 0;
 }
 
 .logo {
-  color: white;
-  font-size: 2rem;
-  text-decoration: none;
+  margin-bottom: 0;
+  min-width: 70px;
 }
 
 .navItemWrapper {
   display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-left: 20px;
+  gap: 45.07px;
 }
 
 .navWhite {
-  color: white;
-  text-decoration: none;
+  font-weight: 400;
+  font-size: 2rem;
   list-style: none;
+  text-decoration: none;
+  width: fit-content;
+  white-space: nowrap;
+  color: #339989;
+}
 
-  padding: 1.5em;
+button {
+  width: 159.64px;
+  height: 45.07px;
+  font-size: inherit;
+  color: #06d6a0;
+  border: 2px solid #06d6a0;
+  border-radius: 6.76064px;
 }

@@ -1,6 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;600&family=Source+Code+Pro:wght@300;500;600&display=swap");
 
 .App {
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Fira Code", monospace;
+  font-family: "Source Code Pro", monospace;
+}
+
+h1 {
+  color: #339989;
+}
+
+h2,
+p {
+  color: #9ee7db;
 }
