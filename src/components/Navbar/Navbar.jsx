@@ -1,40 +1,54 @@
 import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import navbarStyling from "./Navbar.css";
-import { Button } from "@mui/material";
-import logo from "../../assets/logo.png";
+import MenuIcon from "@mui/icons-material/Menu";
+import logo from "../../images/logo.png";
+import Hamburger from "hamburger-react";
 
 const Navbar = () => {
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
+
+  const toggleHamburger = () => {
+    setHamburgerMenu(!hamburgerMenu);
+  };
+
   return (
-    <nav className="navigation">
+    <div className="navbar-header">
       <NavLink to="/">
-        <img className="logo" src={logo} alt="" />
+        <img className="logo" src={logo} alt="me-and-myself" />
       </NavLink>
-
-      <ul className="navItemWrapper">
-        <div className="LB-logo">
-          <NavLink className="navWhite" to="/about-me">
-            <li className="logo">Home</li>
+      <nav className="navigation">
+        <ul className={hamburgerMenu ? "hideMenu" : "showMenu"}>
+          <NavLink className="nav-item" to="/">
+            <li>Home</li>
           </NavLink>
+
+          <NavLink className="nav-item" to="/my-projects">
+            <li>About</li>
+          </NavLink>
+
+          <NavLink className="nav-item" to="/my-projects">
+            <li>Projects</li>
+          </NavLink>
+
+          <NavLink className="nav-item" to="/my-projects">
+            <li>Portfolio</li>
+          </NavLink>
+
+          <NavLink className="nav-item" to="/my-projects">
+            <li>Contact</li>
+          </NavLink>
+        </ul>
+        <div className="nav-hamburger" onClick={toggleHamburger}>
+          <Hamburger
+            className="nav-hamburger"
+            toggled={hamburgerMenu}
+            toggle={setHamburgerMenu}
+          ></Hamburger>
         </div>
-
-        <NavLink className="navWhite" to="/my-projects">
-          <li>About</li>
-        </NavLink>
-
-        <NavLink className="navWhite" to="/my-projects">
-          <li>Projects</li>
-        </NavLink>
-
-        <NavLink className="navWhite" to="/my-projects">
-          <li>Portfolio</li>
-        </NavLink>
-
-        <NavLink className="navWhite" to="/my-projects">
-          <li>Contact</li>
-        </NavLink>
-      </ul>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
